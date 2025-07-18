@@ -1,42 +1,97 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Young+Serif&display=swap');
+
+:root {
+  --font-family-manrope: 'Manrope', sans-serif;
+  --font-size-quote: 28px;
+
+  /* Colors */
+  --blue-200: hsl(193, 38%, 86%);
+  --green-300: hsl(150, 100%, 66%);
+  --blue-600: hsl(217, 19%, 38%);
+  --blue-900: hsl(217, 19%, 24%);
+  --blue-950: hsl(218, 23%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-family-manrope);
+  background-color: var(--blue-950);
+  color: var(--blue-200);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
   text-align: center;
+  padding: 1rem;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.container {
+  width: 100%;
+  max-width: 540px;
+  padding-bottom: 5rem;
 }
 
 .card {
-  padding: 2em;
+  background-color: var(--blue-900);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  position: relative;
+  box-shadow: 0 0 20px var(--blue-950);
 }
 
-.read-the-docs {
-  color: #888;
+.advice-id {
+  color: var(--green-300);
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  margin-bottom: 1.25rem;
+}
+
+.quote {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--blue-200);
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.divider-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 2rem;
+}
+
+.dice-btn {
+  position: absolute;
+  bottom: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--green-300);
+  border: none;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px var(--green-300);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+  padding: 0;
+}
+
+.dice-btn:hover {
+  box-shadow: 0 0  40px var(--green-300);
+}
+
+.dice-btn img {
+  width: 24px;
+  height: 24px;
 }
