@@ -95,3 +95,23 @@ html, body {
   width: 24px;
   height: 24px;
 }
+
+@media (max-width: 350px) {
+  .quote {
+    font-size: 1.25rem;
+  }
+
+  .card {
+    padding: 1.5rem 1rem;
+  }
+
+  .dice-btn {
+    width: 56px;
+    height: 56px;
+  }
+
+  .dice-btn img {
+    width: 20px;
+    height: 20px;
+  }
+}
